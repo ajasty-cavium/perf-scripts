@@ -1,0 +1,13 @@
+L1 miss rate = 3%
+L2 miss rate = 5%
+Avg cycles/dmiss = 831
+Time spent in CDMISS = 265ms
+STX fail rate = 3%
+DMB instructions issued = 11035703
+STR stalls on NOWBUFS = 7440
+Cycles spent in PTW = 3283566459 / 3ms
+rce=11286993 rcc=10407347907 rc8=8137664776 r90=307481341 r68=3140228143 r2d=38324805
+r23=95077728958 r24=1331108394251 ref=340324903 r1a=0 r10=1428847467 rd8=21279067979
+Backend stall time = 1386ms
+icache stall time = 22ms
+throttle stall time = 0ms

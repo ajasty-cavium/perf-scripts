@@ -1,0 +1,22 @@
+cronus@arm64:~/perf-scripts-master/perf-scripts$ sudo ./perf-30.sh 30
+L1 miss rate = 3%
+L2 miss rate = 5%
+Avg cycles/dmiss = 649
+Time spent in CDMISS = 6672ms
+STX fail rate = 2%
+DMB instructions issued = 33907655
+STR stalls on NOWBUFS = 27295
+Cycles spent in PTW = 10033736578 / 104ms
+rce=31878519 rcc=29787731950 rc8=25379441198 r90=1031017925 r68=9044286539 r2d=126278000
+r23=294280967347 r24=3936065619103 ref=989874499 r1a=0 r10=4549527324 rd8=63386033247
+Backend stall time = 41000ms
+icache stall time = 660ms
+throttle stall time = 10ms
+Unaligned replay penalty = 2482ms
+rcf=31285213 re7=1558 r187=160221431389 re8=2183393 rc7=187003964422 r7a=69852718118
+r1b=1381106709280 rf=55622609 r10=4565888712 r70=398539533160 rde=170066 r71=215943159628
+rc2=4147081328297 rc3=672466958192 rc4=366597181884 rc5=75699339089 rc0=5186137999136 r11=5186098272017
+Issue clk% = 100
+0 issue cycles = 79
+1 issue cycles = 12
+2 issue cycles = 7
