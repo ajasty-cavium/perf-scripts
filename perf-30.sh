@@ -165,12 +165,28 @@ echo "2 issue cycles = $(($rc4/$iclk))"
 echo "Single-issued instruction% = $(($rc3/$issp))"
 echo "Double-issued instruction% = $((($rc4/$issp)*2))"
 
-./perf stat -a -er5,rde -- sleep $len 2> /tmp/perf1.out
+./perf stat -a -er5,rde,r8,r6,r7,rc -- sleep $len 2> /tmp/perf1.out
 
 getcnt r5
 r5=$cntval
 getcnt rde
 rde=$cntval
+getcnt r8
+r8=$cntval
+getcnt r6
+r6=$cntval
+getcnt r7
+r7=$cntval
+getcnt rc
+rc=$cntval
 
-echo "r5=$r5 rde=$rde r3=$r3 re6=$re6"
+echo "r5=$r5 rde=$rde r3=$r3 re6=$re6 r8=$r8 r6=$r6 r7=$r7 rc=$rc"
+
+./perf stat -a -er1b,rb -- sleep $len 2> /tmp/perf1.out
+getcnt r1b
+r1b=$cntval
+getcnt rb
+rb=$cntval
+
+echo "r1b=$r1b rb=$rb"
 
