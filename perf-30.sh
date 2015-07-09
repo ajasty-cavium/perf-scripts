@@ -5,7 +5,7 @@ cntval=1
 ncores=48
 freq=2000000000
 
-if [ "xlen" == "x" ]
+if [ "x$len" == "x" ]
 then
     len=30
 fi
