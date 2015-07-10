@@ -190,5 +190,5 @@ r1b=$cntval
 getcnt rb
 rb=$cntval
 
-echo "r1b=$r1b rb=$rb ipc=$((($r8*100)/$rc0))"
+echo "r1b=$r1b rb=$rb ipc=$((($r8*100)/$rc0))    \n\n"
 

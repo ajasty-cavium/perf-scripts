@@ -2,15 +2,17 @@
 
 WRITE_FILE="perfstat-`date -Isec`.txt"
 
-./perf-30.sh 1 > $WRITE_FILE
+sudo ./perf-30.sh 30 > $WRITE_FILE
 
-./getfg.sh
+./upload.sh $WRITE_FILE
 
-git stash
+#./getfg.sh
 
-git add $WRITE_FILE *.svg
+#git stash
 
-git commit -a -m "Pushing stats."
+#git add $WRITE_FILE *.svg
 
-git push origin cass
+#git commit -a -m "Pushing stats."
+
+#git push origin cass
 
