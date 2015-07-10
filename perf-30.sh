@@ -51,6 +51,8 @@ echo "Time spent in CDMISS = $(($re6/(($msfreq)*$ncores)))ms"
 
 ./perf stat -a -er1f9,r1fa,r1fb,r193,rdf,r1f2 -- sleep $len 2> /tmp/perf1.out
 
+getcnt r1f9
+r1f9=$(($cntval*100000))
 getcnt r1fb
 r1fb=$(($cntval*100000))
 getcnt r1fa
@@ -64,6 +66,7 @@ rdf=$cntval
 getcnt r193
 r193=$cntval
 
+echo "r1f9=$r1f9 r1fb=$r1fb r1fa=$r1fa r1f2=$r1f2 rdf=$rdf r193=$r193 re6=$re6"
 echo "STX fail rate = $(($r1fa/$r1fb))%"
 
 echo "DMB instructions issued = $r1f2"
