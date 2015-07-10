@@ -27,23 +27,25 @@ echo "freq=$freq, msfreq=$msfreq"
 ./perf stat -a -er16,r17,r3,r42,r40,re6 -- sleep $len 2> /tmp/perf1.out
 
 getcnt r16
-r16=$(($cntval*1000))
+r16=$(($cntval))
 getcnt r17
-r17=$(($cntval*100000))
+r17=$(($cntval))
 
 getcnt r3
 r3=$cntval
 
 getcnt r42
-r42=$(($cntval*100000))
+r42=$(($cntval))
 getcnt r40
-r40=$(($cntval*1000))
+r40=$(($cntval))
 getcnt re6
 re6=$(($cntval))
 
-echo "L1 miss rate = $(($r42/$r40))%"
-echo "L2 miss rate = $(($r17/$r16))%"
-#echo "Avg cycles/dmiss = $((($re6*100000)/$r17))"
+echo "r16=$r16 r17=$r17 r3=$r3 r42=$r42 r40=$r40 re6=$re6"
+
+echo "L1 miss rate = $((($r42*100)/$r40))%"
+echo "L2 miss rate = $((($r17*100)/$r16))%"
+echo "Avg cycles/dmiss = $((($re6*100000)/$r17))"
 echo "CDMISS latency = $((($re6 + ($r3*8))/$r3))"
 echo "Time spent in CDMISS = $(($re6/(($msfreq)*$ncores)))ms"
 
@@ -188,5 +190,5 @@ r1b=$cntval
 getcnt rb
 rb=$cntval
 
-echo "r1b=$r1b rb=$rb"
+echo "r1b=$r1b rb=$rb ipc=$((($r8*100)/$rc0))"
 
