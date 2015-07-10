@@ -187,11 +187,19 @@ rc=$cntval
 
 echo "r5=$r5 rde=$rde r3=$r3 re6=$re6 r8=$r8 r6=$r6 r7=$r7 rc=$rc"
 
-./perf stat -a -er1b,rb -- sleep $len 2> /tmp/perf1.out
+./perf stat -a -er1b,rb,re,r21,r22,r25 -- sleep $len 2> /tmp/perf1.out
 getcnt r1b
 r1b=$cntval
 getcnt rb
 rb=$cntval
+getcnt re
+re=$cntval
+getcnt r21
+r21=$cntval
+getcnt r22
+r22=$cntval
+getcnt r25
+r25=$cntval
 
-echo "r1b=$r1b rb=$rb ipc=$((($r8*100)/$rc0))    \n\n"
+echo "r1b=$r1b rb=$rb re=$re r21=$r21 r22=$r22 r25=$r25 ipc=$((($r8*100)/$rc0))    \n\n"
 
