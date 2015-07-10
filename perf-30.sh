@@ -14,7 +14,7 @@ function getcnt {
   cntval=`grep -v Perform /tmp/perf1.out | grep $1 | awk '{ print $1; }' | sed s/,//g `
 }
 
-#./getfg.sh
+./getfg.sh
 
 ./perf stat -er11 -- sleep 1 2> /tmp/perf1.out
 getcnt r11
