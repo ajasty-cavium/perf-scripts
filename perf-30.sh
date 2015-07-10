@@ -201,5 +201,57 @@ r22=$cntval
 getcnt r25
 r25=$cntval
 
-echo "r1b=$r1b rb=$rb re=$re r21=$r21 r22=$r22 r25=$r25 ipc=$((($r8*100)/$rc0))    \n\n"
+echo "r1b=$r1b rb=$rb re=$re r21=$r21 r22=$r22 r25=$r25 ipc=$((($r8*100)/$rc0))"
+
+./perf stat -a -ercb,rcd,rce,rcf,r90,r91 -- sleep $len 2> /tmp/perf1.out
+getcnt rcb
+rcb=$cntval
+getcnt rcd
+rcd=$cntval
+getcnt rce
+rce=$cntval
+getcnt rcf
+rcf=$cntval
+getcnt r90
+r90=$cntval
+getcnt r91
+r91=$cntval
+
+echo "rcb=$rcb rcd=$rcd rce=$rce rcf=$rcf r90=$r90 r91=$r91"
+
+./perf stat -a -er78,r79,r7a,r40,r41,rc -- sleep $len 2> /tmp/perf1.out
+getcnt r78
+r78=$cntval
+getcnt r79
+r79=$cntval
+getcnt r7a
+r7a=$cntval
+getcnt r40
+r40=$cntval
+getcnt r41
+r41=$cntval
+getcnt rc
+rc=$cntval
+
+echo "r78=$r78 r79=$r79 r7a=$r7a r40=$r40 r41=$r41 rc=$rc"
+
+./perf stat -a -er3,r4,r9,ra,rd,rf -- sleep $len 2> /tmp/perf1.out
+getcnt r3
+r3=$cntval
+getcnt r4
+r4=$cntval
+getcnt r9
+r9=$cntval
+getcnt ra
+ra=$cntval
+getcnt rd
+rd=$cntval
+getcnt rf
+rf=$cntval
+
+echo "rc3=$r3 r4=$r4 r9=$r9 ra=$ra rd=$rd rf=$rf"
+
+
+
+echo "\n\n"
 
