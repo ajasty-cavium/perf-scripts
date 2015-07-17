@@ -251,7 +251,16 @@ rf=$cntval
 
 echo "rc3=$r3 r4=$r4 r9=$r9 ra=$ra rd=$rd rf=$rf"
 
+./enable_EL0
 
+echo "4d00,4d02,4d04,4d05,4d06,4d08"
+./read_perf -s 0 -e 0 -r 4d00 -r 4d02 -r 4d04 -r 4d05 -r 4d06 -r 4d08 --count $len -i 1
+
+echo "4d0a,4d0c,4d15,4d1e,4d20,4d40"
+./read_perf -s 0 -e 0 -r 4d0a -r 4d0c -r 4d15 -r 4d1e -r 4d20 -r 4d40 --count $len -i 1
+
+echo "4da5,4da7,4da9,4d30,4d32,4d42"
+./read_perf -s 0 -e 0 -r 4da5 -r 4da7 -r 4da9 -r 4d30 -r 4d32 -r 4d42 --count $len -i 1
 
 echo "\n\n"
 
