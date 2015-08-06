@@ -2,7 +2,7 @@
 
 len=$1
 cntval=1
-ncores=48
+ncores=96
 freq=2000000000
 
 if [ "xlen" == "x" ]
@@ -16,10 +16,10 @@ function getcnt {
 
 #./getfg.sh
 
-./perf stat -er11 -- sleep 1 2> /tmp/perf1.out
+./perf stat -a -er11 -- sleep 1 2> /tmp/perf1.out
 getcnt r11
 r11=$cntval
-freq=$r11
+freq=$(($r11/$ncores))
 #msfreq=$(($freq/1000))
 msfreq=$freq
 echo "freq=$freq, msfreq=$msfreq"
