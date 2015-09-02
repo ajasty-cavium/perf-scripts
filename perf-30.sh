@@ -261,7 +261,7 @@ echo "rc3=$r3 r4=$r4 r9=$r9 ra=$ra rd=$rd rf=$rf"
 $ENABLEBIN
 
 #sudo ../read_counter/read_perf/read_perf -s 0 -e 4 -f a.txt -i 3 -r 0x4e02 --count 2
-echo len: $len
+echo "Didn't issue single"
 echo "4d00,4d02,4d04,4d05,4d06,4d08"
 $READBIN -s 0 -e 4 -f - -r 0x4d00 -r 0x4d02 -r 0x4d04 -r 0x4d05 -r 0x4d06 -r 0x4d08 --count $len -i 1
 
@@ -270,6 +270,13 @@ $READBIN -s 0 -e 1 -r -f - 4d0a -r 4d0c -r 4d15 -r 4d1e -r 4d20 -r 4d40 --count 
 
 echo "4da5,4da7,4da9,4d30,4d32,4d42"
 $READBIN -s 0 -e 1 -r -f - 4da5 -r 4da7 -r 4da9 -r 4d30 -r 4d32 -r 4d42 --count $len -i 1
+
+echo "Didn't issue dual"
+echo "4d02,4d04,4d06,4d08,4d0a,4d0c"
+$READBIN -s 0 -e 1 -r -f - 4d02 -r 4d04 -r 4d06 -r 4d08 -r 4d0a -r 4d0c --count $len -i 1
+
+echo "4d0e,4d10,4d12,4d13,4d14,4d16"
+$READBIN -s 0 -e 1 -r -f - 4d0e -r 4d10 -r 4d12 -r 4d13 -r 4d14 -r 4d16 --count $len -i 1
 
 echo "\n\n"
 
