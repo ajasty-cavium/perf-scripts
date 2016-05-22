@@ -1,7 +1,7 @@
 #!/bin/bash
 # Allow easy changing of which perf, read_perf, and enable_EL0 are used
 #PERFBIN=../sdk.build/linux-aarch64/tools/perf/perf
-PERFBIN=./perf
+PERFBIN=./perf42
 #READBIN=../read_counter/read_perf/read_perf
 READBIN=./read_perf
 #ENABLEBIN=../read_counter/enable_EL0/enable_EL0
@@ -26,7 +26,7 @@ function getcnt {
 $PERFBIN stat -a -er11 -- sleep 1 2> /tmp/perf1.out
 getcnt r11
 r11=$cntval
-freq=$(( $r11 / $ncores ))
+freq=$(( ($r11 / $ncores) / 1000))
 #msfreq=$(($freq/1000))
 msfreq=$freq
 echo "freq=$freq, msfreq=$msfreq"
@@ -257,6 +257,8 @@ getcnt rf
 rf=$cntval
 
 echo "rc3=$r3 r4=$r4 r9=$r9 ra=$ra rd=$rd rf=$rf"
+
+exit
 
 $ENABLEBIN
 
