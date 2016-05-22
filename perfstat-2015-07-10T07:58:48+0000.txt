@@ -1,0 +1,28 @@
+freq=1004087, msfreq=1004087
+r16=2146696 r17=92722 r3=1627952 r42=538633 r40=23002634 re6=58960341
+L1 miss rate = 2%
+L2 miss rate = 4%
+Avg cycles/dmiss = 63588297
+CDMISS latency = 44
+Time spent in CDMISS = 1ms
+STX fail rate = 65%
+DMB instructions issued = 187473
+STR stalls on NOWBUFS = 0
+Cycles spent in PTW = 1836813 / 0ms
+rce=0 rcc=250031 rc8=242939 r90=20167 r68=4193 r2d=10299
+r23=79582536 r24=96298274601 ref=0 r1a=0 r10=225723 rd8=52017108
+Backend stall time = 1998ms
+icache stall time = 1ms
+throttle stall time = 0ms
+Unaligned replay penalty = 0ms
+rcf=18 re7=0 r187=12769349 re8=2900 rc7=19533688 r7a=4103700
+r1b=24295839 rf=18 r10=40507 r70=7760015 rde=0 r71=2477209
+rc2=96356142509 rc3=54192259 rc4=32454829 rc5=119402091 rc0=96446355187 r11=96426868775
+Issue clk% = 100
+0 issue cycles = 99
+1 issue cycles = 0
+2 issue cycles = 0
+Single-issued instruction% = 45
+Double-issued instruction% = 54
+r5=375478 rde=0 r3=1627952 re6=58960341 r8=97985164 r6=22287491 r7=12936239 rc=13510735
+r1b=46698283 rb=0 ipc=0
