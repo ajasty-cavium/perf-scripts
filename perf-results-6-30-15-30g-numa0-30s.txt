@@ -1,0 +1,16 @@
+L1 miss rate = 2%
+L2 miss rate = 4%
+Avg cycles/dmiss = 563
+Time spent in CDMISS = 5426ms
+STX fail rate = 2%
+DMB instructions issued = 55880289
+STR stalls on NOWBUFS = 27285
+Cycles spent in PTW = 31592248110 / 329ms
+rce=15500 rcc=23090479156 rc8=25387879683 r90=1367533522 r68=5059987674 r2d=335285391
+r23=317292470664 r24=3905000285451 ref=1078453577 r1a=0 r10=2891756355 rd8=100113829617
+Backend stall time = 40677ms
+icache stall time = 1042ms
+throttle stall time = 11ms
+Unaligned replay penalty = 1924ms
+rcf=215221 re7=2296 r187=177077305469 re8=2858258 rc7=191834929768 r7a=64665823957
+r1b=1397065392722 rf=244978 r10=2906720760 r70=381975549325 r6=303393288220 r71=210301279506

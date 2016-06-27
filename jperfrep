@@ -1,0 +1,9 @@
+#!/bin/sh
+
+if [ "x$PERFHOME" == "x" ]
+then
+    $PERFHOME=.
+fi
+
+$PERFHOME/perf42 report --objdump=$PERFHOME/java-objdump.py
+

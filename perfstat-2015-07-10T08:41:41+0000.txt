@@ -1,0 +1,10 @@
+freq=, msfreq=
+r16=0 r17=0 r3= r42=0 r40=0 re6=0
+DMB instructions issued = 
+STR stalls on NOWBUFS = 
+rce= rcc= rc8= r90= r68= r2d=
+r23= r24= ref= r1a= r10= rd8=
+rcf= re7= r187= re8= rc7= r7a=
+r1b=116605337 rf= r10= r70= rde= r71=
+rc2= rc3= rc4= rc5= rc0= r11=
+r5= rde= r3= re6=0 r8= r6= r7= rc=
