@@ -5,5 +5,11 @@ then
     $PERFHOME=.
 fi
 
-$PERFHOME/perf42 record -F 99 java -agentpath:$PERFHOME/libnativejava.so $@
+JFLAGS=""
+if [ -e ./getflags.sh ]
+then
+    $JFLAGS="`./getflags.sh`"
+fi
+
+$PERFHOME/perf42 record -F 99 java -agentpath:$PERFHOME/libnativejava.so -XX:+PreserveFramePointer $@
 
