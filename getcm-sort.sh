@@ -22,14 +22,16 @@ do
     ADDR=`echo $p | awk '{ print $3; }'`
     PROG=`echo $p | awk '{ print $2; }'`
     VAL=`echo $p  | awk '{ print $1; }'`
-    PCT="$((($VAL*100)/$TOTAL))"
+    #PCT="$((($VAL*100)/$TOTAL))"
+    #echo "scale=2; ($VAL*100)/$TOTAL" 
+    PCT=`echo "scale=2; ($VAL*100)/$TOTAL" | bc -l`
+    printf '%02.2f:' $PCT
     #echo $p | awk '{ print $3; }'
     #echo "hi $ADDR $PROG"
     if [ $PROG == "[kernel.kallsyms]" ]
     then
 	PROG=$KIMG
     fi
-    echo -n "$PCT%: "
     if [ -e $PROG ]
     then
 	addr2line -e $PROG $ADDR
