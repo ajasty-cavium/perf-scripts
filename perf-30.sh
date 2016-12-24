@@ -56,8 +56,6 @@ echo "Avg cycles/dmiss = $((($re6*100000)/$r17))"
 echo "CDMISS latency = $((($re6 + ($r3*8))/$r3))"
 echo "Time spent in CDMISS = $(($re6/(($msfreq)*$ncores)))ms"
 
-exit
-
 $PERFBIN stat -a -er1f9,r1fa,r1fb,r193,rdf,r1f2 -- sleep $len 2> /tmp/perf1.out
 
 getcnt r1f9
