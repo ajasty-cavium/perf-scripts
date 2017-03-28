@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 
 ./perf script -f | ./stackcollapse-perf.pl > perf.folded

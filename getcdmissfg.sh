@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 len=$1
 if [ "x$len" == "x" ]

@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 WRITE_FILE="perfstat-`date -Isec`.txt"
 
